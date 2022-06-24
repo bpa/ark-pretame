@@ -22,8 +22,8 @@ function App() {
         renderInput={(params) => <TextField {...params} label="Creature" />}
         onChange={(e, c) => setCreature(c)}
       />
-      <TextField sx={{ maxWidth: "50%" }} size="small" margin="normal" type="number" defaultValue={saddle} InputProps={{ inputProps: { min: 0, max: 1000 } }} label="Saddle Armor Rating" onChange={e => setSaddle(e.target.value)} />
-      <TextField sx={{ maxWidth: "50%" }} size="small" margin="normal" type="number" defaultValue={armor} InputProps={{ inputProps: { min: 0, max: 1000 } }} label="Survivor Armor Rating" onChange={e => setArmor(e.target.value)} />
+      <TextField sx={{ maxWidth: "50%" }} margin="normal" type="number" defaultValue={saddle} InputProps={{ inputProps: { min: 0, max: 1000 } }} label="Saddle Armor Rating" onChange={e => setSaddle(e.target.value)} />
+      <TextField sx={{ maxWidth: "50%" }} margin="normal" type="number" defaultValue={armor} InputProps={{ inputProps: { min: 0, max: 1000 } }} label="Survivor Armor Rating" onChange={e => setArmor(e.target.value)} />
       <CalculatedValues creature={creature} saddle={saddle} armor={armor} />
     </div>
   );

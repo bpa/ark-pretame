@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import HelpIcon from '@mui/icons-material/Help';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,9 +10,6 @@ import Paper from '@mui/material/Paper';
 import { IconButton, Tooltip } from '@mui/material';
 
 export default function ScrollingTable(props) {
-    const [healthTipOpen, setHealthTipOpen] = useState(false);
-    const [tameTipOpen, setTameTipOpen] = useState(false);
-    const [survivorTipOpen, setSurvivorTipOpen] = useState(false);
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
             <TableContainer sx={{ maxHeight: 440 }}>
@@ -26,12 +22,12 @@ export default function ScrollingTable(props) {
                                     <IconButton size="small "><HelpIcon fontSize="small" /></IconButton>
                                 </Tooltip>
                             </TableCell>
-                            <TableCell align="center">Vs. Tame
+                            <TableCell align="center">Damage vs. Tame
                                 <Tooltip title="When 'Floating Damage Text' is enabled, let the creature bite one of your tames. The damage shown can be looked up to show to the wild melee stat." >
                                     <IconButton size="small" ><HelpIcon fontSize="small" /></IconButton>
                                 </Tooltip>
                             </TableCell>
-                            <TableCell align="center">Vs. Survivor
+                            <TableCell align="center">Damage vs. Survivor
                                 <Tooltip title="When 'Floating Damage Text' is enabled, let the creature bite you. The damage shown can be looked up to show to the wild melee stat." >
                                     <IconButton size="small" ><HelpIcon fontSize="small" /></IconButton>
                                 </Tooltip>
